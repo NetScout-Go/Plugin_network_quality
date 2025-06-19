@@ -1,4 +1,5 @@
 # NetScout Plugin: Network Quality Monitor
+
 Target Host
 Test Duration
 Sampling Interval
@@ -24,7 +25,7 @@ packet_size
 
 Or use the NetScout-Go plugin manager to install it:
 
-```
+```go
 // In your NetScout application
 pluginLoader.InstallPlugin("https://github.com/NetScout-Go/Plugin_network_quality")
 ```
