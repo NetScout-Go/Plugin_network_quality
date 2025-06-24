@@ -1,49 +1,53 @@
 {
-  "id": "network_quality",
-  "name": "Network Quality Monitor",
+  "author": "NetScout-Go",
   "description": "Continuously monitors network quality metrics including jitter, packet loss, and latency",
   "icon": "timeline",
+  "id": "network_quality",
+  "license": "MIT",
+  "name": "Network Quality Monitor",
   "parameters": [
     {
+      "default": "8.8.8.8",
+      "description": "The hostname or IP address to monitor",
       "id": "target",
       "name": "Target Host",
-      "description": "The hostname or IP address to monitor",
-      "type": "string",
       "required": true,
-      "default": "8.8.8.8"
+      "type": "string"
     },
     {
-      "id": "duration",
-      "name": "Test Duration",
-      "description": "Duration of the test in seconds",
-      "type": "number",
-      "required": false,
       "default": 30,
-      "min": 10,
+      "description": "Duration of the test in seconds",
+      "id": "duration",
       "max": 300,
-      "step": 10
+      "min": 10,
+      "name": "Test Duration",
+      "required": false,
+      "step": 10,
+      "type": "number"
     },
     {
-      "id": "interval",
-      "name": "Sampling Interval",
-      "description": "Time between samples in seconds",
-      "type": "number",
-      "required": false,
       "default": 1,
-      "min": 0.2,
+      "description": "Time between samples in seconds",
+      "id": "interval",
       "max": 5,
-      "step": 0.2
+      "min": 0.2,
+      "name": "Sampling Interval",
+      "required": false,
+      "step": 0.2,
+      "type": "number"
     },
     {
-      "id": "packet_size",
-      "name": "Packet Size",
-      "description": "Size of the ICMP packets in bytes",
-      "type": "number",
-      "required": false,
       "default": 56,
-      "min": 16,
+      "description": "Size of the ICMP packets in bytes",
+      "id": "packet_size",
       "max": 1472,
-      "step": 8
+      "min": 16,
+      "name": "Packet Size",
+      "required": false,
+      "step": 8,
+      "type": "number"
     }
-  ]
+  ],
+  "repository": "https://github.com/NetScout-Go/Plugin_network_quality",
+  "version": "1.0.0"
 }
